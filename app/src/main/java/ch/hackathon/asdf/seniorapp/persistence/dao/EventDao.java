@@ -91,6 +91,25 @@ public class EventDao {
         return events;
     }
 
+    public Event getEventById(long id){
+        Event event = null;
+        Cursor cursor = null;
+        try {
+            cursor = database.query(DBHelper.TABLE_EVENTS,
+                    allColumns, "id="+id, null, null, null, null);
+
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+               event = cursorToEvent(cursor);
+                cursor.moveToNext();
+            }
+        }
+        catch(NullPointerException ex){
+            return null;
+        }
+        cursor.close();
+        return event;
+    }
 
     private Event cursorToEvent(Cursor cursor) {
         Event event = new Event();

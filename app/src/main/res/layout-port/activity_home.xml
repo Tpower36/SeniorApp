@@ -40,7 +40,8 @@
             android:scaleType="fitCenter"
             android:padding="30dp"
             android:layout_column="0"
-            android:layout_margin="60dp"/>
+            android:layout_margin="60dp"
+            android:onClick="startEvent"/>
 
         <ImageButton
             android:layout_width="300dp"

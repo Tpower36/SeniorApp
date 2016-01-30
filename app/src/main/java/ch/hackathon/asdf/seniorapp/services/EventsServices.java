@@ -26,6 +26,14 @@ public class EventsServices {
         return events;
     }
 
+    public static Event getEventById(Context context, Long id){
+        EventDao dao = new EventDao(context);
+        dao.open();
+        Event event = dao.getEventById(id);
+        dao.close();
+        return event;
+    }
+
     /**
      * Service permettant d'ajouter un événement
      *
