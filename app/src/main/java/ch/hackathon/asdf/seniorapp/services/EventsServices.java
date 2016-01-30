@@ -12,11 +12,37 @@ import ch.hackathon.asdf.seniorapp.persistence.dao.EventDao;
  */
 public class EventsServices {
 
-    public static List<Event> getAllEvents(Context context){
+    /**
+     * Service retournant la liste de tous les événements
+     *
+     * @param context
+     * @return la liste des événements
+     */
+    public static List<Event> getAllEvents(Context context) {
         EventDao dao = new EventDao(context);
         dao.open();
         List<Event> events = dao.getAllEvents();
         dao.close();
         return events;
+    }
+
+    /**
+     * Service permettant d'ajouter un événement
+     *
+     * @param event l'événement
+     * @return un code erreur, 0 si tout est ok
+     */
+    public static int addEvent(Context context, Event event) {
+        EventDao dao = new EventDao(context);
+        if(event != null) {
+            dao.open();
+            dao.createEvent(event);
+            dao.close();
+            return 0;
+        }
+        else{
+            return 1;
+        }
+
     }
 }

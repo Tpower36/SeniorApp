@@ -12,13 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ajouter événement"
-        android:id="@+id/add"/>
+        android:id="@+id/add"
+        android:alignParentTop="true"
+        android:layout_marginBottom="16px"/>
 
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@android:id/list"></ListView>
+        android:id="@android:id/list"
+        android:layout_below="@+id/add"></ListView>
 
 
 </RelativeLayout>
