@@ -43,5 +43,6 @@ public class AddEventActivity extends AppCompatActivity {
         EventsServices.addEvent(this, event);
 
         Intent intent = new Intent(AddEventActivity.this, EventsActivity.class);
+        startActivity(intent);
     }
 }
