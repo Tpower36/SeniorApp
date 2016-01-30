@@ -49,16 +49,10 @@ public class EventsActivity extends AppCompatActivity {
             });
         }
 
-    public void onClick(View view) {
-        @SuppressWarnings("unchecked")
-        Event event = null;
-        switch (view.getId()) {
-            case R.id.add:
-
-                break;
-        }
-
-    }
+   public void addActivity(View button){
+       Intent intent = new Intent(EventsActivity.this, AddEventActivity.class);
+       startActivity(intent);
+   }
 
 
 }
