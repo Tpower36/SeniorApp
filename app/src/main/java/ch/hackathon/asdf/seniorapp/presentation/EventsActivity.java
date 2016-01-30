@@ -54,7 +54,8 @@ public class EventsActivity extends AppCompatActivity {
         Event event = null;
         switch (view.getId()) {
             case R.id.add:
-
+                Intent intent = new Intent(EventsActivity.this, AddEventActivity.class);
+                startActivity(intent);
                 break;
         }
 
