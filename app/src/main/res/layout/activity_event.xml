@@ -38,19 +38,6 @@
         android:layout_alignStart="@+id/eventDateView" />
 
 
-    <com.google.android.maps.MapView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:apiKey="votre clé"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_alignEnd="@+id/eventNameView"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/placeLabel"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/view" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
