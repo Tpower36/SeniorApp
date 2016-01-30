@@ -10,16 +10,20 @@ public class Event implements Serializable {
     private long id;
     private String title;
     private String description;
-    private Date eventDate;
+    private String eventDate;
     private String location;
 
-    public Event(String title, String description, Date eventDate) {
+    public Event() {
+    }
+
+    public Event(String title, String description, String eventDate) {
         this.title = title;
         this.description = description;
         this.eventDate = eventDate;
     }
 
-    public Event(String title, String description, Date eventDate, String location) {
+    public Event(long id, String title, String description, String eventDate, String location) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.eventDate = eventDate;
@@ -50,11 +54,11 @@ public class Event implements Serializable {
         this.description = description;
     }
 
-    public Date getEventDate() {
+    public String getEventDate() {
         return eventDate;
     }
 
-    public void setEventDate(Date eventDate) {
+    public void setEventDate(String eventDate) {
         this.eventDate = eventDate;
     }
 

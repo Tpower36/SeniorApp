@@ -48,15 +48,15 @@ public class DBHelper extends SQLiteOpenHelper{
                 query.append(TABLE_EVENTS);
                 query.append("(");
                 query.append(EVENTS_ID);
-                query.append("integer primary key autoincrement, ");
+                query.append(" integer primary key autoincrement, ");
                 query.append(EVENTS_TITLE);
-                query.append("varchar(100) not null, ");
+                query.append(" varchar(100) not null, ");
                 query.append(EVENTS_DESCRIPTION);
-                query.append("varchar(255) not null, ");
+                query.append(" varchar(255), ");
                 query.append(EVENTS_DATE);
-                query.append("datetime not null, ");
+                query.append(" text not null, ");
                 query.append(EVENTS_LOCATION);
-                query.append("varchar(100);");
+                query.append(" varchar(100));");
                 break;
 
             case TABLE_CONTACTS:
@@ -64,15 +64,13 @@ public class DBHelper extends SQLiteOpenHelper{
                 query.append(TABLE_CONTACTS);
                 query.append("(");
                 query.append(CONTACTS_ID);
-                query.append("integer primary key autoincrement, ");
+                query.append(" integer primary key autoincrement, ");
                 query.append(CONTACTS_USERNAME);
-                query.append("varchar(255) not null, ");
+                query.append(" varchar(255) not null, ");
                 query.append(CONTACTS_FIRSTNAME);
-                query.append("varchar(255) not null, ");
-                query.append(CONTACTS_FIRSTNAME);
-                query.append("varchar(255) not null, ");
+                query.append(" varchar(255) not null, ");
                 query.append(CONTACTS_LASTNAME);
-                query.append("varchar(255) not null;");
+                query.append(" varchar(255) not null);");
                 break;
         }
         return query.toString();
