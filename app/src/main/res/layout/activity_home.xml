@@ -12,66 +12,98 @@
 
 
     <ImageButton
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/eventButton"
-        android:layout_alignTop="@+id/transportButton"
-        android:layout_alignParentStart="true"
         android:background="#00A1F1"
         android:src="@drawable/calendar_icon"
         android:scaleType="fitCenter"
         android:padding="30dp"
         android:onClick="startEvent"
-        />
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/transportButton"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/transportButton"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp"
         android:src="@drawable/car_icon"
         android:scaleType="centerInside"
         android:padding="30dp"
         android:background="#FFBB00"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp" />
 
     <ImageButton
-    android:layout_width="350dp"
-    android:layout_height="350dp"
-    android:id="@+id/contactButton"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentStart="true"
-    android:layout_marginBottom="203dp"
-    android:background="#F65314"
-    android:src="@drawable/person_icon"
-    android:scaleType="centerInside"
-    />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/contactButton"
+        android:background="#F65314"
+        android:src="@drawable/person_icon"
+        android:scaleType="centerInside"
+        android:padding="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginRight="40dp" />
 
     <ImageButton
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:id="@+id/unknowButton"
-        android:layout_alignTop="@+id/contactButton"
-        android:layout_alignStart="@+id/transportButton"
-        android:background="#7CBB00"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/news_icon"
         android:scaleType="centerInside"
         android:padding="30dp"
-        />
+        android:id="@+id/imageButton"
+        android:background="#068c0d"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/eventButton"
+        android:layout_marginBottom="150dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Accueil"
-        android:id="@+id/textView4"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:textSize="60dp"
-        />
+        android:text="News"
+        android:textSize="55dp"
+        android:id="@+id/textView"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contacts"
+        android:id="@+id/textView3"
+        android:textSize="55dp"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/contactButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Evenements"
+        android:id="@+id/textView5"
+        android:textSize="55dp"
+        android:layout_below="@+id/eventButton"
+        android:layout_alignStart="@+id/eventButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Transports"
+        android:id="@+id/textView6"
+        android:textSize="55dp"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignStart="@+id/transportButton" />
+
+
 </RelativeLayout>
-
-
