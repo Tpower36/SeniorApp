@@ -41,10 +41,10 @@ public class EventsActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     long personId = eventsList.get(position).getId();
 
-                /*
-                Intent intent = new Intent(ListPersonneActivity.this, DetailPersonneActivity.class);
+
+                Intent intent = new Intent(EventsActivity.this, EventDetailsActivity.class);
                 intent.putExtra("ID", String.valueOf(personId));
-                startActivity(intent);*/
+                startActivity(intent);
                 }
             });
         }
