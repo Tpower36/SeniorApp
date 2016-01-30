@@ -14,8 +14,6 @@ public class EventDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        long id;
-        id = 0;
         Event event = null;
 
         super.onCreate(savedInstanceState);
@@ -31,12 +29,20 @@ public class EventDetailsActivity extends AppCompatActivity {
             TextView nom = (TextView) findViewById(R.id.eventNameView);
             nom.setText(event.getTitle());
 
+
             TextView desc = (TextView) findViewById(R.id.eventDescription);
-            desc.setText(event.getDescription());
+            if(event.getDescription() == null){
+                desc.setText("Aucune description");
+            }else {
+                desc.setText(event.getDescription());
+            }
 
             TextView date = (TextView) findViewById(R.id.eventDate);
-            date.setText(event.getEventDate().toString());
-
+            if(event.getEventDate() == null) {
+                date.setText("Aucune date");
+            }else {
+                date.setText(event.getEventDate().toString());
+            }
             //A faire : Implémenter le lieu sur la map...
         }
 
