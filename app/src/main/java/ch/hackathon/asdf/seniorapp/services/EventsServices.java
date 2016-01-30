@@ -26,6 +26,12 @@ public class EventsServices {
         return events;
     }
 
+    /**
+     * Service retournant un Event par rapport à son id
+     * @param context
+     * @param id l'id de l'event
+     * @return l'event
+     */
     public static Event getEventById(Context context, Long id){
         EventDao dao = new EventDao(context);
         dao.open();
