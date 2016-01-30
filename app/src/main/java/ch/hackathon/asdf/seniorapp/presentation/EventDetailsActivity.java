@@ -21,7 +21,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
 
-        event = EventsServices.getEventById(this, getIntent().getLongExtra("ID", id));
+        event = EventsServices.getEventById(this, Long.valueOf(getIntent().getExtras().getString("ID")));
 
         if(event == null){
             TextView err = (TextView) findViewById(R.id.eventNameView);
