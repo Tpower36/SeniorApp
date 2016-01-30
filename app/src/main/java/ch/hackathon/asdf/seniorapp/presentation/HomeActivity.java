@@ -1,7 +1,9 @@
-package ch.hackathon.asdf.seniorapp;
+package ch.hackathon.asdf.seniorapp.presentation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ch.hackathon.asdf.seniorapp.R;
 
 public class HomeActivity extends AppCompatActivity {
 
