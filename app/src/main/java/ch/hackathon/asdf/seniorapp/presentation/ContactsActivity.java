@@ -1,7 +1,9 @@
 package ch.hackathon.asdf.seniorapp.presentation;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import ch.hackathon.asdf.seniorapp.R;
 
@@ -12,6 +14,11 @@ public class ContactsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
+    }
+
+    public void editFavorite(View button){
+        Intent intent = new Intent(ContactsActivity.this, ContactEditActivity.class);
+        startActivity(intent);
     }
 
 }

@@ -41,6 +41,7 @@
     <ImageButton
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:onClick="startContacts"
         android:id="@+id/contactButton"
         android:background="#F65314"
         android:src="@drawable/person_icon"
