@@ -22,6 +22,16 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String CONTACTS_LASTNAME="lastname";
     public static final String CONTACTS_FIRSTNAME="firstname";
 
+    public static final String TABLE_NEWS = "news";
+    public static final String NEWS_ID = "id";
+    public static final String NEWS_RESUME ="summary";
+    public static final String NEWS_CONTENT="content";
+
+    public static final String TABLE_TRANSPORTER = "transporter";
+    public static final String TRANSPORTER_ID = "id";
+    public static final String TRANSPORTER_PHONE ="phone";
+    public static final String TRANSPORTER_NAME="name";
+
     private static final String DATABASE_NAME = "SeniorApp.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -33,6 +43,8 @@ public class DBHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(createQueryBuilder(TABLE_EVENTS));
         db.execSQL(createQueryBuilder(TABLE_CONTACTS));
+        db.execSQL(createQueryBuilder(TABLE_NEWS));
+        db.execSQL(createQueryBuilder(TABLE_TRANSPORTER));
     }
 
     /**
@@ -71,6 +83,30 @@ public class DBHelper extends SQLiteOpenHelper{
                 query.append(" varchar(255), ");
                 query.append(CONTACTS_LASTNAME);
                 query.append(" varchar(255));");
+                break;
+
+            case TABLE_TRANSPORTER:
+                query.append("create table ");
+                query.append(TABLE_TRANSPORTER);
+                query.append("(");
+                query.append(TRANSPORTER_ID);
+                query.append(" integer primary key autoincrement, ");
+                query.append(TRANSPORTER_NAME);
+                query.append(" varchar(255) not null, ");
+                query.append(TRANSPORTER_PHONE);
+                query.append(" varchar(255) not null); ");
+                break;
+
+            case TABLE_NEWS:
+                query.append("create table ");
+                query.append(TABLE_NEWS);
+                query.append("(");
+                query.append(NEWS_ID);
+                query.append(" integer primary key autoincrement, ");
+                query.append(NEWS_RESUME);
+                query.append(" varchar(255) not null, ");
+                query.append(NEWS_CONTENT);
+                query.append(" varchar(255) not null); ");
                 break;
         }
         return query.toString();

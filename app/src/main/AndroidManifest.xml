@@ -10,18 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
-        <!-- Map permissions -->
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-        <!-- API Key Map -->
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDKymeBXNeiFWY5jRUejv6zItpmr2MVyQ0" />
-
         <activity
             android:name=".presentation.HomeActivity"
             android:screenOrientation="portrait">
@@ -45,12 +33,6 @@
         <activity android:name=".presentation.ContactsActivity" />
         <activity android:name=".presentation.ListContactsActivity"/>
         <activity android:name=".presentation.ContactEditActivity"></activity>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
     </application>
-    <!-- Maps API key : AIzaSyDRyj0UcCJ0SYdc4cWuFig-YAqs9-o0H5M -->
 
 </manifest>
