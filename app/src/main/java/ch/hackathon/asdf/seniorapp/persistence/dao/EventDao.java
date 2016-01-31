@@ -41,7 +41,9 @@ public class EventDao {
     public void createEvent(Event event) {
         ContentValues values = new ContentValues();
         values.put(DBHelper.EVENTS_TITLE, event.getTitle());
-        values.put(DBHelper.EVENTS_DESCRIPTION, event.getDescription());
+        if(event.getDescription() != null){
+            values.put(DBHelper.EVENTS_DESCRIPTION, event.getDescription());
+        }
         values.put(DBHelper.EVENTS_DATE, event.getEventDate().toString());
         if(event.getLocation() != null){
             values.put(DBHelper.EVENTS_LOCATION, event.getLocation());
@@ -109,6 +111,25 @@ public class EventDao {
         }
         cursor.close();
         return event;
+    }
+    public void updateEvent(Event event){
+        ContentValues values = new ContentValues();
+        values.put(DBHelper.EVENTS_TITLE, event.getTitle());
+        if(event.getDescription() != null){
+            values.put(DBHelper.EVENTS_DESCRIPTION, event.getDescription());
+        }
+        values.put(DBHelper.EVENTS_DATE, event.getEventDate().toString());
+        if(event.getLocation() != null){
+            values.put(DBHelper.EVENTS_LOCATION, event.getLocation());
+        }
+
+        long insertId = database.update(DBHelper.TABLE_EVENTS, values,
+                "id=" + event.getId(), null);
+        Cursor cursor = database.query(DBHelper.TABLE_EVENTS,
+                allColumns, DBHelper.EVENTS_ID + " = " + insertId, null,
+                null, null, null);
+        cursor.moveToFirst();
+        cursor.close();
     }
 
     private Event cursorToEvent(Cursor cursor) {

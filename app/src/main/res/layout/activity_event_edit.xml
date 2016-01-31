@@ -15,7 +15,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTitle"
+        android:id="@+id/editEventTitle"
         android:hint="Nom"
         android:paddingBottom="16dp"
         />
@@ -23,7 +23,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editDescription"
+        android:id="@+id/editEventDescription"
         android:hint="Description"
         android:inputType="textMultiLine"
         android:ems="10"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editDate"
+        android:id="@+id/editEventDate"
         android:hint="Date"
         android:paddingBottom="16dp"
         />
@@ -42,7 +42,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editLocation"
+        android:id="@+id/editEventLocation"
         android:hint="Lieu"
         android:paddingBottom="16dp"
         />
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ajouter"
-        android:id="@+id/button"
-        android:onClick="addEvent"/>
+        android:id="@+id/editEventButton"
+        android:onClick="editEvent"/>
 
 </LinearLayout>
