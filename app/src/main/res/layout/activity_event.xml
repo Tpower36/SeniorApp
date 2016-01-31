@@ -32,42 +32,29 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Petit café / repas au tea-room du coin"
-        android:id="@+id/textView2"
+        android:id="@+id/eventDescriptionView"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/eventDateView"
         android:layout_alignStart="@+id/eventDateView" />
 
 
-    <com.google.android.maps.MapView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:apiKey="votre clé"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_alignEnd="@+id/eventNameView"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/placeLabel"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/view" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Emplacement :"
-        android:id="@+id/placeLabel"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/textView2" />
+        android:text="Editer"
+        android:id="@+id/editEventButton"
+        android:onClick="editEvent"
+        android:layout_centerVertical="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demander transport"
-        android:id="@+id/requestTransportButton"
-        android:onClick="requestTransport"
+        android:text="Supprimer"
+        android:id="@+id/deleteEvent"
+        android:background="#ff0101"
+        android:onClick="deleteEvent"
         android:layout_centerVertical="true"
-        android:layout_alignEnd="@id/placeLabel" />
+        android:layout_toEndOf="@+id/editEventButton" />
 
 
 </RelativeLayout>

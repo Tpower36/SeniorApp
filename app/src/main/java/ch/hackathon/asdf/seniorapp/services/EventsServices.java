@@ -59,4 +59,29 @@ public class EventsServices {
         }
 
     }
+    public static int editEvent(Context context, Event event){
+        EventDao dao = new EventDao(context);
+        if(event != null) {
+            dao.open();
+            dao.updateEvent(event);
+            dao.close();
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
+
+    public static int deleteEvent(Context context, Event event){
+        EventDao dao = new EventDao(context);
+        if(event != null) {
+            dao.open();
+            dao.deleteEvent(event);
+            dao.close();
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
 }

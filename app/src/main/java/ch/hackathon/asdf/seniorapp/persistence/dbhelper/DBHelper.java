@@ -64,7 +64,7 @@ public class DBHelper extends SQLiteOpenHelper{
                 query.append(TABLE_CONTACTS);
                 query.append("(");
                 query.append(CONTACTS_ID);
-                query.append(" integer primary key autoincrement, ");
+                query.append(" integer primary key, ");
                 query.append(CONTACTS_USERNAME);
                 query.append(" varchar(255) not null, ");
                 query.append(CONTACTS_FIRSTNAME);
