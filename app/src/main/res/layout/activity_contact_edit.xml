@@ -10,60 +10,81 @@
     tools:context="ch.hackathon.asdf.seniorapp.presentation.ContactEditActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Séléction des favoris :"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="50dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/tvRank1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="30dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerRank1"
         android:layout_below="@+id/tvRank1"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/tvRank2"
         android:layout_below="@+id/spinnerRank1"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:textSize="30dp"
+        android:layout_marginBottom="5dp" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerRank2"
         android:layout_below="@+id/tvRank2"
         android:layout_alignParentStart="true" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/tvRank3"
         android:layout_below="@+id/spinnerRank2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:textSize="30dp"
+        android:layout_marginBottom="5dp" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerRank3"
         android:layout_below="@+id/tvRank3"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
+        android:layout_width="fill_parent"
+        android:layout_height="125dp"
+        android:text="Valider"
         android:id="@+id/editTop3button"
         android:onClick="editTop3"
-        android:layout_below="@+id/spinnerRank3"
-        android:layout_alignParentStart="true" />
+        android:textSize="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp" />
 
 
 </RelativeLayout>

@@ -8,9 +8,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Ajouter nouvel événement:"
+        android:text="Modifier un événement :"
         android:paddingBottom="16dp"
-        android:id="@+id/addEventTitle" />
+        android:id="@+id/addEventTitle"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="50dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -18,7 +23,8 @@
         android:id="@+id/editEventTitle"
         android:hint="Nom"
         android:paddingBottom="16dp"
-        />
+        android:layout_margin="25dp"
+        android:textSize="30dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -27,7 +33,9 @@
         android:hint="Description"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:paddingBottom="16dp"/>
+        android:paddingBottom="16dp"
+        android:layout_margin="25dp"
+        android:textSize="30dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -37,7 +45,8 @@
         android:id="@+id/editEventDate"
         android:hint="Date"
         android:paddingBottom="16dp"
-        />
+        android:layout_margin="25dp"
+        android:textSize="30dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -45,13 +54,18 @@
         android:id="@+id/editEventLocation"
         android:hint="Lieu"
         android:paddingBottom="16dp"
-        />
+        android:layout_margin="25dp"
+        android:textSize="30dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ajouter"
+        android:layout_width="fill_parent"
+        android:layout_height="125dp"
+        android:text="Modifier"
         android:id="@+id/editEventButton"
-        android:onClick="editEvent"/>
+        android:onClick="editEvent"
+        android:textSize="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="350dp" />
 
 </LinearLayout>

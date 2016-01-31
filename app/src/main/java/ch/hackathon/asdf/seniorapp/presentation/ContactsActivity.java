@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import ch.hackathon.asdf.seniorapp.R;
 import ch.hackathon.asdf.seniorapp.services.ContactsServices;
-import ch.hackathon.asdf.seniorapp.utils.SkypeContacts;
 
 
 public class ContactsActivity extends Activity {
@@ -22,11 +21,24 @@ public class ContactsActivity extends Activity {
         TextView fav2 = (TextView)findViewById(R.id.favContact2);
         TextView fav3 = (TextView)findViewById(R.id.favContact3);
 
-        fav1.setText(ContactsServices.getContactByRank(this,1).getUsername());
-        fav2.setText(ContactsServices.getContactByRank(this,2).getUsername());
-        fav3.setText(ContactsServices.getContactByRank(this,3).getUsername());
 
-        SkypeContacts.getContactByUsername(this, "seggy282");
+        if (ContactsServices.getContactByRank(this, 1) == null) {
+            fav1.setText("Non renseigné");
+        } else {
+            fav1.setText(ContactsServices.getContactByRank(this, 1).getUsername());
+        }
+
+        if (ContactsServices.getContactByRank(this, 2) == null) {
+            fav2.setText("Non renseigné");
+        } else {
+            fav2.setText(ContactsServices.getContactByRank(this, 2).getUsername());
+        }
+
+        if (ContactsServices.getContactByRank(this, 3) == null) {
+            fav2.setText("Non renseigné");
+        } else {
+            fav3.setText(ContactsServices.getContactByRank(this, 3).getUsername());
+        }
     }
 
     public void editFavorite(View button){
