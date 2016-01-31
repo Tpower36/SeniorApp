@@ -16,6 +16,15 @@ public class ContactsServices {
         dao.addToTop(contact, rank);
         dao.close();
     }
+
+    public static Contact getContactByRank(Context context, int rank){
+        ContactsDao dao = new ContactsDao(context);
+        dao.open();
+        Contact contact =  dao.getContactById(rank);
+        dao.close();
+        return contact;
+    }
+
     public static boolean isRankSet(Context context, int rank){
         return new ContactsDao(context).getContactById(rank)!= null;
     }

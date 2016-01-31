@@ -31,6 +31,7 @@
         <activity android:name=".presentation.NewsActivity" />
         <activity android:name=".presentation.EventEditActivity" />
         <activity android:name=".presentation.ContactsActivity" />
+        <activity android:name=".presentation.ListContactsActivity"/>
         <activity android:name=".presentation.ContactEditActivity"></activity>
     </application>
 

@@ -25,9 +25,11 @@ public class ListContactsActivity extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_contacts_list);
 
+        contacts = SkypeContacts.getSkypeContacts(this);
         ContactAdapter adapter = new ContactAdapter(this, contacts);
         ListView contactsListView = (ListView) findViewById(android.R.id.list);
         contactsListView.setAdapter(adapter);
+
         contactsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

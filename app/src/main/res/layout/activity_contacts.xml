@@ -93,6 +93,7 @@
         android:layout_height="150dp"
         android:text="Tous les contacts"
         android:id="@+id/allContacts"
+        android:onClick="displayContacts"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/favEdit"
         android:layout_centerHorizontal="true"
