@@ -30,5 +30,10 @@ public class HomeActivity extends Activity {
         startActivity(intent);
     }
 
+    public void startTransports(View button){
+        Intent intent = new Intent(HomeActivity.this, TransporterActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -28,6 +28,7 @@
     <ImageButton
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:onClick="startTransports"
         android:id="@+id/transportButton"
         android:src="@drawable/car_icon"
         android:scaleType="centerInside"

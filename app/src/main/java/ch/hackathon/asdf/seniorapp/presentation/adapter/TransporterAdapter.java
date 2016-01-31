@@ -1,6 +1,7 @@
 package ch.hackathon.asdf.seniorapp.presentation.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +26,15 @@ public class TransporterAdapter extends ArrayAdapter<Transporter>{
     public View getView(int position, View convertView, ViewGroup parent){
         Transporter transporter = getItem(position);
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.event_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.transporter_item, parent, false);
         }
 
         TextView tvName = (TextView) convertView.findViewById(R.id.transporterName);
         TextView tvNumber = (TextView) convertView.findViewById(R.id.transporterNumber);
 
         //C'est a ce moment qu'on assigne les valeurs aux textView
+        Log.i("TEST", transporter.getNumber());
+
         tvName.setText(transporter.getName());
         tvNumber.setText(transporter.getNumber());
 
