@@ -25,5 +25,10 @@ public class HomeActivity extends Activity {
         startActivity(intent);
     }
 
+    public void startContacts(View button){
+        Intent intent = new Intent(HomeActivity.this, ContactsActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -68,9 +68,9 @@ public class DBHelper extends SQLiteOpenHelper{
                 query.append(CONTACTS_USERNAME);
                 query.append(" varchar(255) not null, ");
                 query.append(CONTACTS_FIRSTNAME);
-                query.append(" varchar(255) not null, ");
+                query.append(" varchar(255), ");
                 query.append(CONTACTS_LASTNAME);
-                query.append(" varchar(255) not null);");
+                query.append(" varchar(255));");
                 break;
         }
         return query.toString();

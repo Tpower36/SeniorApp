@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
 public class SkypeContacts{
 
     public static List<String> getSkypeContacts(Context context){
-        List contacts = null;
+        List contacts = new ArrayList<String>();
             Cursor c = context.getContentResolver().query(
                     ContactsContract.Data.CONTENT_URI,
                     new String[]{ContactsContract.Data.CONTACT_ID, ContactsContract.Data.DATA1},
@@ -24,6 +25,7 @@ public class SkypeContacts{
 
             while (c != null && c.moveToNext()) {
                 contacts.add(c.getString(1));
+
             }
         return contacts;
 
