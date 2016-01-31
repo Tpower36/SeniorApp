@@ -12,7 +12,7 @@
         android:layout_column="0"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/linearLayout">
 
         <QuickContactBadge
@@ -58,7 +58,9 @@
             android:text="Large Text"
             android:id="@+id/favContact1"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textIsSelectable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,7 +69,8 @@
             android:text="Large Text"
             android:id="@+id/favContact2"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="30dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,7 +79,8 @@
             android:text="Large Text"
             android:id="@+id/favContact3"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="30dp" />
 
     </LinearLayout>
 
@@ -86,10 +90,10 @@
         android:text="Editer les favoris"
         android:id="@+id/favEdit"
         android:onClick="editFavorite"
-        android:layout_marginTop="244dp"
-        android:textSize="40dp"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true" />
+        android:textSize="45dp"
+        android:layout_above="@+id/allContacts"
+        android:layout_alignStart="@+id/allContacts"
+        android:layout_marginBottom="25dp" />
 
     <Button
         android:layout_width="745dp"
@@ -97,11 +101,11 @@
         android:text="Tous les contacts"
         android:id="@+id/allContacts"
         android:onClick="displayContacts"
-        android:layout_marginTop="47dp"
-        android:textSize="40dp"
+        android:textSize="45dp"
         android:background="#AADDFF"
-        android:layout_below="@+id/favEdit"
-        android:layout_alignStart="@+id/favEdit" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -113,6 +117,7 @@
         android:layout_alignStart="@+id/favEdit"
         android:textIsSelectable="true"
         android:textSize="50dp"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>

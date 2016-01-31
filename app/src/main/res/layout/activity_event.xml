@@ -14,8 +14,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="40dp"
-        android:textSize="40dp"
-        android:textIsSelectable="false" />
+        android:textSize="50dp"
+        android:textIsSelectable="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="25 Janvier 2016"
         android:id="@+id/eventDateView"
-        android:textSize="30dp"
+        android:textSize="35dp"
         android:layout_below="@+id/eventNameView"
         android:layout_alignStart="@+id/eventNameView" />
 
@@ -35,7 +35,8 @@
         android:id="@+id/eventDescriptionView"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/eventDateView"
-        android:layout_alignStart="@+id/eventDateView" />
+        android:layout_alignStart="@+id/eventDateView"
+        android:textSize="30dp" />
 
 
     <Button
