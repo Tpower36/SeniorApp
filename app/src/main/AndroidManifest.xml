@@ -27,7 +27,8 @@
             android:name=".presentation.EventDetailsActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".presentation.NewsActivity" />
-        <activity android:name=".presentation.EventEditActivity"></activity>
+        <activity android:name=".presentation.EventEditActivity" />
+        <activity android:name=".presentation.ContactEditActivity"></activity>
     </application>
 
 </manifest>
