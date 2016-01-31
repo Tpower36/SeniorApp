@@ -1,27 +1,38 @@
 package ch.hackathon.asdf.seniorapp.presentation;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-
+import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.places.personalized.HereContent;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
 
 import ch.hackathon.asdf.seniorapp.Business.Event;
 import ch.hackathon.asdf.seniorapp.R;
 import ch.hackathon.asdf.seniorapp.services.EventsServices;
 
-public class EventDetailsActivity extends FragmentActivity
-        implements OnMapReadyCallback {
+public class EventDetailsActivity extends AppCompatActivity {
     Long id;
     Event event;
+    GoogleMap gmap;
+    Address address;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -61,8 +72,20 @@ public class EventDetailsActivity extends FragmentActivity
             }
             //A faire : Implémenter le lieu sur la map...
 
-            GoogleMap gmap;
+
             gmap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+
+            try {
+                //Utilisation d'un GeoCoder pour obtenir les Latitude et Longitude de l'emplacement
+                Geocoder geocoder = new Geocoder(this);
+                List<Address> addresses = geocoder.getFromLocationName(event.getLocation(), 1);
+                address = addresses.get(0);
+
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+            }
 
         }
 
@@ -93,48 +116,10 @@ public class EventDetailsActivity extends FragmentActivity
     }
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        /*client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "EventDetails Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://ch.hackathon.asdf.seniorapp.presentation/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);*/
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        /*Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "EventDetails Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://ch.hackathon.asdf.seniorapp.presentation/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();*/
-    }
-
-    @Override
     public void onMapReady(GoogleMap googleMap) {
-
+        gmap.addMarker(new MarkerOptions()
+                .position(new LatLng(address.getLatitude(), address.getLongitude()))
+                .title("Lieu de rendez-vous"));
     }
 }
