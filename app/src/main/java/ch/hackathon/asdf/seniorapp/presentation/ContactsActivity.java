@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import ch.hackathon.asdf.seniorapp.R;
 import ch.hackathon.asdf.seniorapp.services.ContactsServices;
+import ch.hackathon.asdf.seniorapp.utils.SkypeContacts;
 
 
 public class ContactsActivity extends Activity {
@@ -24,6 +25,8 @@ public class ContactsActivity extends Activity {
         fav1.setText(ContactsServices.getContactByRank(this,1).getUsername());
         fav2.setText(ContactsServices.getContactByRank(this,2).getUsername());
         fav3.setText(ContactsServices.getContactByRank(this,3).getUsername());
+
+        SkypeContacts.getContactByUsername(this, "seggy282");
     }
 
     public void editFavorite(View button){
