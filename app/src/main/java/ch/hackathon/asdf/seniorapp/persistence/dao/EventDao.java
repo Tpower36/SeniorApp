@@ -51,11 +51,6 @@ public class EventDao {
 
         long insertId = database.insert(DBHelper.TABLE_EVENTS, null,
                 values);
-        Cursor cursor = database.query(DBHelper.TABLE_EVENTS,
-                allColumns, DBHelper.EVENTS_ID + " = " + insertId, null,
-                null, null, null);
-        cursor.moveToFirst();
-        cursor.close();
     }
 
     /**
@@ -81,8 +76,8 @@ public class EventDao {
 
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                Event comment = cursorToEvent(cursor);
-                events.add(comment);
+                Event event = cursorToEvent(cursor);
+                events.add(event);
                 cursor.moveToNext();
             }
         }
