@@ -30,9 +30,9 @@ public class TransporterActivity extends AppCompatActivity {
 
         TransporterAdapter adapter = new TransporterAdapter(this, transportersList);
 
-        ListView eventsListView = (ListView) findViewById(android.R.id.list);
-        eventsListView.setAdapter(adapter);
-        eventsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ListView transporterListView = (ListView) findViewById(android.R.id.list);
+        transporterListView.setAdapter(adapter);
+        transporterListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 long personId = transportersList.get(position).getId();
